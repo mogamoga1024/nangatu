@@ -1,0 +1,21 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', 'Meiryo', '游ゴシック', 'Yu Gothic', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  user-select: none;
+}
+
+#mondai {
+  width: fit-content;
+  margin: 8px auto 0;
+  font-size: 128px;
+}
+
+#kaisetu {
+  width: fit-content;
+  margin: 8px auto 0;
+  font-size: 24px;
+}
+
+
