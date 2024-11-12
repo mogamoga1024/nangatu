@@ -59,6 +59,12 @@ let kitaiKotae = "";
 function createMondai() {
     const mondai = mondaiList[Math.floor(Math.random() * 12)];
 
+    // 同じ問題を連続で出させない
+    if (mondai.kotae === kitaiKotae) {
+        createMondai();
+        return;
+    }
+
     $mondai.innerText = mondai.mondai;
     kitaiKotae = mondai.kotae;
 
