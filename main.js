@@ -1,6 +1,7 @@
 
 const $mondai = document.querySelector("#mondai");
 const $message = document.querySelector("#message");
+const $monthRadios = document.querySelectorAll('input[name="month"]');
 
 const mondaiList = [
     {
@@ -66,4 +67,11 @@ function createMondai() {
 
 createMondai();
 
+$monthRadios.forEach(radio => {
+    radio.addEventListener("change", e => {
+        const selectedKotae = e.target.value;
+        console.log('選択された月:', selectedKotae);
+        // 必要に応じて他の処理を追加
+    });
+});
 
