@@ -30,6 +30,12 @@ body {
   justify-content: center;
 }
 
+@media screen and (max-width: 635px) {
+  .month-buttons {
+    max-width: 350px;
+  }
+}
+
 .month-buttons input[type="radio"] {
   display: none;
 }
