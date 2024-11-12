@@ -1,7 +1,7 @@
 
 const $mondai = document.querySelector("#mondai");
 const $message = document.querySelector("#message");
-const $monthRadios = document.querySelectorAll('input[name="month"]');
+const monthButtons = document.querySelectorAll('input[name="month"]');
 
 const mondaiList = [
     {
@@ -67,11 +67,21 @@ function createMondai() {
 
 createMondai();
 
-$monthRadios.forEach(radio => {
-    radio.addEventListener("change", e => {
+monthButtons.forEach($button => {
+    $button.addEventListener("change", e => {
         const selectedKotae = e.target.value;
-        console.log('選択された月:', selectedKotae);
-        // 必要に応じて他の処理を追加
+        if (selectedKotae === kitaiKotae) {
+            $message.innerText = "正解！😆";
+            $button.parentElement.style.pointerEvents = "none";
+            setTimeout(() => {
+                $button.checked = false;
+                $button.parentElement.style.pointerEvents = "";
+                createMondai();
+            }, 1000);
+        }
+        else {
+            $message.innerText = "不正解😢";
+        }
     });
 });
 
