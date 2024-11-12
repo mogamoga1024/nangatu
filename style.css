@@ -19,13 +19,15 @@ body {
 }
 
 .month-buttons {
-  width: fit-content;
+  max-width: 810px;
   margin: 40px auto 0;
 }
 
 .month-buttons {
   display: flex;
   gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .month-buttons input[type="radio"] {
@@ -33,10 +35,12 @@ body {
 }
 
 .month-buttons label {
-  padding: 8px 12px;
+  width: 32px;
+  padding: 6px;
   border: 2px solid #007bff;
   border-radius: 6px;
-  font-size: 18px;
+  font-size: 20px;
+  text-align: center;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
